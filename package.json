@@ -1,6 +1,6 @@
 {
     "name": "react-native-blend",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Improve your React Native StyleSheet",
     "scripts": {
         "tsc": "tsc --noEmit",
@@ -9,6 +9,7 @@
         "pre-commit": "lint-staged",
         "prettier": "prettier --write .",
         "example": "cd examples/demo && yarn && yarn start",
+        "example:prod": "cd examples/demo && yarn && yarn ios:prod",
         "release": "release-it"
     },
     "pre-commit": "pre-commit",
