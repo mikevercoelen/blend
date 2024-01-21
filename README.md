@@ -3,3 +3,9 @@
 Improved StyleSheet for React Native with support for themes, variants.
 
 Heavily inspired by [react-native-unistyles](https://github.com/jpudysz/react-native-unistyles)
+
+# Installation
+
+```
+npm install react-native-blend --save
+```
