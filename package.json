@@ -1,0 +1,91 @@
+{
+    "name": "react-native-blend",
+    "version": "1.0.0",
+    "description": "Improve your React Native StyleSheet",
+    "scripts": {
+        "tsc": "tsc --noEmit",
+        "build": "bob build",
+        "lint": "eslint . --fix",
+        "pre-commit": "lint-staged",
+        "prettier": "prettier --write .",
+        "example": "cd examples/demo && yarn && yarn start",
+        "release": "release-it"
+    },
+    "pre-commit": "pre-commit",
+    "main": "lib/commonjs/index",
+    "module": "lib/module/index",
+    "types": "lib/typescript/src/index.d.ts",
+    "react-native": "src/index",
+    "source": "src/index",
+    "files": [
+        "src",
+        "lib",
+        "!**/.*"
+    ],
+    "keywords": [
+        "react-native",
+        "expo",
+        "stylesheet",
+        "styles"
+    ],
+    "repository": "https://github.com/mikevercoelen/blend.git",
+    "author": "Mike Vercoelen <mike.vercoelen@gmail.com>",
+    "license": "MIT",
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "*.{js,jsx,md,html,json,css,graphql}": [
+            "prettier --write"
+        ]
+    },
+    "devDependencies": {
+        "@types/react": "18.2.48",
+        "@typescript-eslint/eslint-plugin": "^6.19.0",
+        "@typescript-eslint/parser": "^6.19.0",
+        "eslint": "^8.56.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-native": "^4.1.0",
+        "eslint-plugin-unicorn": "^50.0.1",
+        "eslint-plugin-unused-imports": "^3.0.0",
+        "lint-staged": "^15.2.0",
+        "pre-commit": "^1.2.2",
+        "prettier": "^3.2.4",
+        "react": "18.2.0",
+        "react-native": "0.73.2",
+        "react-native-builder-bob": "^0.23.2",
+        "react-native-web": "0.19.10",
+        "release-it": "^17.0.1",
+        "typescript": "5.3.3"
+    },
+    "peerDependencies": {
+        "react": "*",
+        "react-native": "*",
+        "react-native-web": "*"
+    },
+    "peerDependenciesMeta": {
+        "react-native-web": {
+            "optional": true
+        }
+    },
+    "react-native-builder-bob": {
+        "source": "src",
+        "output": "lib",
+        "targets": [
+            "commonjs",
+            "module",
+            [
+                "typescript",
+                {
+                    "project": "tsconfig.build.json"
+                }
+            ]
+        ]
+    },
+    "dependencies": {}
+}

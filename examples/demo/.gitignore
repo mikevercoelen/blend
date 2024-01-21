@@ -1,0 +1,5 @@
+dist
+.expo
+node_modules
+ios
+android

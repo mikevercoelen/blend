@@ -1,0 +1,5 @@
+export const BENCHMARK_SETTINGS = {
+    BOXES: 100,
+    BOXES_PER: 20,
+    DELAY_BETWEEN: 100,
+};
