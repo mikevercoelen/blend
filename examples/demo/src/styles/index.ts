@@ -1,13 +1,7 @@
-import { darkTheme, lightTheme } from './theme';
-
-type AppThemes = {
-    light: typeof lightTheme;
-    dark: typeof darkTheme;
-};
+import 'react-native-blend';
+import type { Theme } from './theme';
 
 declare module 'react-native-blend' {
     // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-    export interface BlendThemes extends AppThemes {}
+    export interface BlendThemes extends Theme {}
 }
-
-export { lightTheme, darkTheme };
