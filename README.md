@@ -10,7 +10,7 @@ Heavily inspired by [react-native-unistyles](https://github.com/jpudysz/react-na
 npm install react-native-blend --save
 ```
 
-# 1. Setup Typescript
+# 1. Setup Theme types (optional, skip if you are not using Typescript)
 
 Create a file called `blend.d.ts` somewhere in your project (probably in a `src/types` folder) and add the following:
 
@@ -24,13 +24,29 @@ export type Theme = {
     };
 };
 
-export type Themes = {
-    light: Theme;
-    dark: Theme;
-};
-
 declare module 'react-native-blend' {
     // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-    export interface BlendThemes extends Themes {}
+    export interface BlendTheme extends Theme {}
 }
+```
+
+# 2. Setup Theme Provider
+
+```tsx
+import { BlendProvider } from 'react-native-blend';
+
+const appTheme: Theme = {
+    colors: {
+        primary: '#000',
+        secondary: '#fff',
+    },
+};
+
+const App = () => {
+    return (
+        <BlendProvider theme={appTheme}>
+            <MyApp />
+        </BlendProvider>
+    );
+};
 ```

@@ -1,10 +1,10 @@
+import { BlendProvider, useBlend, useTheme } from './blendContext';
 import { createStyleSheet } from './createStyleSheet';
-import { ThemeProvider } from './themeContext';
 import { useStyles } from './useStyles';
-import { useTheme } from './useTheme';
 
-import type { BlendThemes } from './types/global';
+import type { BlendContext } from './types/context';
+import type { BlendTheme } from './types/global';
 
-export { useStyles, createStyleSheet, useTheme, ThemeProvider };
+export { useStyles, createStyleSheet, useTheme, useBlend, BlendProvider };
 
-export type { BlendThemes };
+export type { BlendTheme, BlendContext };

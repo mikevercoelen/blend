@@ -1,6 +1,6 @@
 import type { ImageStyle, TextStyle, ViewStyle } from 'react-native';
 
-import type { BlendTheme } from './blend';
+import type { BlendTheme } from './global';
 
 export type AllAvailableStyles = ViewStyle & TextStyle & ImageStyle;
 

@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 
-import { useTheme } from './useTheme';
+import { useTheme } from './blendContext';
 
-import type { BlendTheme } from './types/blend';
+import type { BlendTheme } from './types/global';
 import type { StyleSheetAdvanced } from './types/stylesheet';
 
 export type UseStylesOutput<Props extends object, S extends StyleSheetAdvanced<Props>> = {
