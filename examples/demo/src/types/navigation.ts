@@ -5,6 +5,7 @@ export enum ScreenName {
     Playground = 'Playground',
     Benchmark = 'Benchmark',
     BenchmarkAllFeatures = 'BenchmarkAllFeatures',
+    BenchmarkButton = 'BenchmarkButton',
 }
 
 export type RootStackParams = {
@@ -12,6 +13,7 @@ export type RootStackParams = {
     [ScreenName.Playground]: undefined;
     [ScreenName.Benchmark]: undefined;
     [ScreenName.BenchmarkAllFeatures]: undefined;
+    [ScreenName.BenchmarkButton]: undefined;
 };
 
 export type NavigationProps<S extends ScreenName = ScreenName.Home> = NavigationProp<RootStackParams, S>;
