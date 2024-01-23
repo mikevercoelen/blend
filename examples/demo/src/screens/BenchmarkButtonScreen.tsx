@@ -11,7 +11,7 @@ export const BenchmarkButtonScreen: React.FunctionComponent = () => {
             times={BENCHMARK_SETTINGS.BOXES_PER}
             boxes={BENCHMARK_SETTINGS.BOXES}
             testDelay={BENCHMARK_SETTINGS.DELAY_BETWEEN}
-            title={`Init blend + rendering ${BENCHMARK_SETTINGS.BOXES} boxes`}
+            title={`Init blend + rendering ${BENCHMARK_SETTINGS.BOXES} Buttons`}
             description={`Single StyleSheet vs ${BENCHMARK_SETTINGS.BOXES}x Blend useStyles with single theme`}
             stylesheet={(onMeasureEnd) => {
                 // Replace me with StyleSheet
