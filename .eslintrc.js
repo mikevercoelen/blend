@@ -172,5 +172,6 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'react/no-object-type-as-default-prop': 'error',
         'react/no-unused-prop-types': 'error',
+        'react/prop-types': 'off',
     },
 };
