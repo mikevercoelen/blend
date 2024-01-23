@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { Main } from './components/Main';
 import { BenchmarkAllFeaturesScreen } from './screens/BenchmarkAllFeaturesScreen';
+import { BenchmarkButtonScreen } from './screens/BenchmarkButtonScreen';
 import { BenchmarkScreen } from './screens/BenchmarkScreen';
 import { HomeScreen } from './screens/HomeScreen';
 import { PlaygroundScreen } from './screens/PlaygroundScreen';
@@ -41,6 +42,10 @@ export const App: React.FunctionComponent = () => {
                         <Stack.Screen
                             name={ScreenName.BenchmarkAllFeatures}
                             component={BenchmarkAllFeaturesScreen}
+                        />
+                        <Stack.Screen
+                            name={ScreenName.BenchmarkButton}
+                            component={BenchmarkButtonScreen}
                         />
                     </Stack.Navigator>
                 </NavigationContainer>

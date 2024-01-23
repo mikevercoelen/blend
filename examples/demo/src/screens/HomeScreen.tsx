@@ -48,6 +48,12 @@ export const HomeScreen = () => {
                             return navigation.navigate(ScreenName.BenchmarkAllFeatures);
                         }}
                     />
+                    <DemoLink
+                        description="Benchmark (Button)"
+                        onPress={() => {
+                            return navigation.navigate(ScreenName.BenchmarkButton);
+                        }}
+                    />
                 </DemoGroup>
                 <View style={styles.fakeSpacer} />
             </ScrollView>

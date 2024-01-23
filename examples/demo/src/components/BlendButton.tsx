@@ -25,7 +25,7 @@ export enum ButtonVariant {
     Cancel = 'cancel',
 }
 
-type ButtonProps = Omit<PressableProps, 'onPress' | 'disabled'> & {
+export type ButtonProps = Omit<PressableProps, 'onPress' | 'disabled'> & {
     title: string;
     style?: ViewStyle;
     styleTitle?: TextStyle;
@@ -76,7 +76,7 @@ type ButtonState = {
     isPressed: boolean;
 };
 
-export const Button = React.memo<ButtonProps>(
+export const BlendButton = React.memo<ButtonProps>(
     ({
         title,
         onPress,
@@ -176,7 +176,7 @@ export const Button = React.memo<ButtonProps>(
     }
 );
 
-Button.displayName = 'Button';
+BlendButton.displayName = 'Button';
 
 type ButtonStyleProps = {
     variant: ButtonVariant;
